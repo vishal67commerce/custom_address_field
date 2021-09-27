@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="extra_shipping_cost" instance="Dev\Custom\Observer\SalesModelServiceQuoteSubmitBefore" />
+    </event>
+    <event name="sales_order_place_after">
+        <observer name="after_save_order" instance="Dev\Custom\Observer\OrderSaveAfter" />
+    </event>
+</config>
